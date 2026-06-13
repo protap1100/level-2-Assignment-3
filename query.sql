@@ -1,0 +1,14 @@
+-- DROP TABLES IF THEY ALREADY EXIST
+DROP TABLE IF EXISTS Bookings;
+DROP TABLE IF EXISTS Matches;
+DROP TABLE IF EXISTS Users;
+
+
+-- 1. CREATE USERS TABLE
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    role VARCHAR(30) CHECK (role IN ('Football Fan', 'Ticket Manager')),
+    phone_number VARCHAR(20)
+);
