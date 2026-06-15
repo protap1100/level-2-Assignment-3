@@ -1,11 +1,8 @@
--- DROP TABLES IF THEY ALREADY EXIST
 DROP TABLE IF EXISTS Bookings;
-
 DROP TABLE IF EXISTS Matches;
-
 DROP TABLE IF EXISTS Users;
 
--- 1. CREATE USERS TABLE
+-- 1.USERS TABLE
 CREATE TABLE
     Users (
         user_id INT PRIMARY KEY,
@@ -15,7 +12,7 @@ CREATE TABLE
         phone_number VARCHAR(20)
     );
 
--- 2. Matches table
+-- 2.Matches table
 CREATE TABLE
     Matches (
         match_id INT PRIMARY KEY,
@@ -32,7 +29,7 @@ CREATE TABLE
         )
     );
 
--- 3. Booking table
+-- 3.Booking table
 CREATE TABLE
     Bookings (
         booking_id INT PRIMARY KEY,
